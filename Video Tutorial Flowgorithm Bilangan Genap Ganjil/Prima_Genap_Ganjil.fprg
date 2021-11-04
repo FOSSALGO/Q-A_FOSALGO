@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="VD1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-05 05:03:15 AM"/>
+        <attribute name="created" value="VkQxO0RFU0tUT1AtSzE0UVJDMjsyMDIxLTExLTA1OzA0OjM4OjI0IEFNOzI1MDQ="/>
+        <attribute name="edited" value="VkQxO0RFU0tUT1AtSzE0UVJDMjsyMDIxLTExLTA1OzA1OjAzOjE1IEFNOzE7MjYwNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A" type="Integer" array="False" size=""/>
+            <input variable="A"/>
+            <comment text="periksa apakah A adalah bilangan prima"/>
+            <declare name="isPrima" type="Boolean" array="False" size=""/>
+            <assign variable="isPrima" expression="true"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="a-1" end="2" direction="dec" step="1">
+                <if expression="A % i == 0">
+                    <then>
+                        <assign variable="isPrima" expression="false"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="isPrima==true">
+                <then>
+                    <output expression="A &amp;&quot; adalah bilangan PRIMA&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="A &amp;&quot; bukan bilangan PRIMA&quot;" newline="True"/>
+                </else>
+            </if>
+            <comment text="Periksa apakah A bilangan Genap atau Ganjil"/>
+            <if expression="A % 2 == 0">
+                <then>
+                    <output expression="&quot; dan &quot;&amp; A &amp;&quot; adalah bilangan GENAP&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot; dan &quot;&amp; A &amp;&quot; adalah bilangan GANJIL&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
